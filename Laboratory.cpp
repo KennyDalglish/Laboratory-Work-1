@@ -10,24 +10,24 @@ void Laboratory::mod(int value_one, int value_two, bool mode)
 	fmod_result = fmod(value_one, value_two);
 	if (fmod_result == 0)
 	{
-		cout << "Îñòàòêà íåò" << endl;
+		cout << "ÐžÑÑ‚Ð°Ñ‚ÐºÐ° Ð½ÐµÑ‚" << endl;
 	}
 	else
 	{
-		cout << "Îñòàòîê: " << fmod_result << endl;
+		cout << "ÐžÑÑ‚Ð°Ñ‚Ð¾Ðº:  " << fmod_result << endl;
 		if (mode == true)
 		{
-			cout << "Îñòàòîê * 100 | Ðàâåí: " << fmod_result * 100 << endl;
+			cout << "ÐžÑÑ‚Ð°Ñ‚Ð¾Ðº * 100 | Ð Ð°Ð²ÐµÐ½:  " << fmod_result * 100 << endl;
 			value_one = value_one - static_cast< int >(fmod_result);
 			fmod_result = fmod(value_one, 10 + 1);
-			cout << "Îñòàòîê îò value_one íà 10 + 1 | Ðàâåí: = " << fmod_result << endl;
+			cout << "ÐžÑÑ‚Ð°Ñ‚Ð¾Ðº Ð¾Ñ‚ value_one Ð½Ð° 10 + 1 | Ð Ð°Ð²ÐµÐ½: = " << fmod_result << endl;
 		}
 	}
 }
 void Laboratory::div(int value_one, int value_two)
 {
 	div_result = ldiv(value_one, value_two);
-	cout << "Çíà÷åíèå ïåðâîãî ÷èñëà: " << div_result.quot << " | " << "Çíà÷åíèå âòîðîãî ÷èñëà: " << div_result.rem << endl;
+	cout << "Ð—Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð¿ÐµÑ€Ð²Ð¾Ð³Ð¾ Ñ‡Ð¸ÑÐ»Ð°:  " << div_result.quot << " | " << "Ð—Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð²Ñ‚Ð¾Ñ€Ð¾Ð³Ð¾ Ñ‡Ð¸ÑÐ»Ð°: " << div_result.rem << endl;
 }
 void Laboratory::pigsInBlankets(int count_rub, int purchase_value)
 {
@@ -37,13 +37,13 @@ void Laboratory::pigsInBlankets(int count_rub, int purchase_value)
 	counter_rub = count_rub - (count_rub / purchase_value) * purchase_value;
 	if (counter_rub == 0)
 	{
-		cout << "Ñäà÷è íåò" << endl;
+		cout << "Ð¡Ð´Ð°Ñ‡Ð¸ Ð½ÐµÑ‚" << endl;
 	}
 	else
 	{
-		cout << "Ñäà÷à: " << counter_rub << endl;
+		cout << "Ð¡Ð´Ð°Ñ‡Ð°: " << counter_rub << endl;
 	}
-	cout << "Êîëè÷åñòâî ñîñèñîê: " << counter_pigs << endl;
+	cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ¾ÑÐ¸ÑÐ¾Ðº: " << counter_pigs << endl;
 }
 void Laboratory::pasties(int value)
 {
@@ -52,16 +52,16 @@ void Laboratory::pasties(int value)
 		return;
 	philip_and_christina = (value / 3) / 2;
 	alla = philip_and_christina * 4;
-	cout << "Êðèñòèíà ñ Ôèëëèïîì ñúåëè ïî: " << philip_and_christina << endl;
-	cout << "Àëëà ñúåëà: " << alla << endl;
+	cout << "ÐšÑ€Ð¸ÑÑ‚Ð¸Ð½Ð° Ñ Ð¤Ð¸Ð»Ð»Ð¸Ð¿Ð¾Ð¼ ÑÑŠÐµÐ»Ð¸ Ð¿Ð¾:  " << philip_and_christina << endl;
+	cout << "ÐÐ»Ð»Ð° ÑÑŠÐµÐ»Ð°: " << alla << endl;
 }
 void Laboratory::doubleFigures()
 {
 	int value = 0;
-	cout << "Ââåäèòå ÷èñëî îò 0 äî 99" << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾ Ð¾Ñ‚ 0 Ð´Ð¾ 99" << endl;
 	while (!(cin >> value) || value < 0 || value > 99)
 	{
-		cout << "Ââåäèòå ÷èñëî îò 0 äî 99" << endl;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾ Ð¾Ñ‚ 0 Ð´Ð¾ 99" << endl;
 
 		cin.clear();
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -69,15 +69,15 @@ void Laboratory::doubleFigures()
 	value_one = value / 10;
 	value_two = value % 10;
 	value = value_one + value_two;
-	cout << "Ñóììà öèôð: " << value << endl;
+	cout << "Ð¡ÑƒÐ¼Ð¼Ð° Ñ†Ð¸Ñ„Ñ€:  " << value << endl;
 }
 void Laboratory::numbersGame()
 {
 	int value = 0;
-	cout << "Ââåäèòå ÷èñëî îò 100 äî 999" << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾ Ð¾Ñ‚ 100 Ð´Ð¾ 999" << endl;
 	while (!(cin >> value) || value < 100 || value > 999)
 	{
-		cout << "Ââåäèòå ÷èñëî îò 100 äî 999" << endl;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾ Ð¾Ñ‚ 100 Ð´Ð¾ 999" << endl;
 
 		cin.clear();
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -86,27 +86,27 @@ void Laboratory::numbersGame()
 	result_game = value * pow(10, nDigits) + value;
 	result_game = result_game / 13;
 	result_game = result_game / abs(value);
-	cout << "×èñëî = " << result_game << endl;
+	cout << "Ð§Ð¸ÑÐ»Ð¾ = " << result_game << endl;
 }
 void Laboratory::mathematicalExample(double params1, double params2, double params3)
 {
 	result_mathematicalExample = pow(params2, pow(abs(params1), 1 / 3)) + pow(cos(params2), 3)* ((abs(params1 - params2)*(1 + pow(sin(params3), 2) / sqrt(params1 + params2)) / (exp(abs(params1 - params2)) + params1 / 2)));
-	cout << "Ðåçóëüòàò âû÷èñëåíèÿ: " << result_mathematicalExample << endl;
+	cout << "Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ Ð²Ñ‹Ñ‡Ð¸ÑÐ»ÐµÐ½Ð¸Ñ: " << result_mathematicalExample << endl;
 }
 void Laboratory::ConverterTime()
 {
 	time_t time;
 	struct tm * ptm;
-	cout << "Ââåäèòå äàòó â UNIX-TIME ôîðìàòå, à ÿ Âàì âûâåäó â UTC: " << std::endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð°Ñ‚Ñƒ Ð² UNIX-TIME Ñ„Ð¾Ñ€Ð¼Ð°Ñ‚Ðµ, Ð° Ñ Ð’Ð°Ð¼ Ð²Ñ‹Ð²ÐµÐ´Ñƒ Ð² UTC: " << std::endl;
 	cin >> time;
 	ptm = gmtime(&time);
-	cout << "Âðåìÿ â UTC ôîðìàòå: " << ptm->tm_hour << ":" << ptm->tm_min << ":" << ptm->tm_sec << endl;
+	cout << "Ð’Ñ€ÐµÐ¼Ñ Ð² UTC Ñ„Ð¾Ñ€Ð¼Ð°Ñ‚Ðµ: " << ptm->tm_hour << ":" << ptm->tm_min << ":" << ptm->tm_sec << endl;
 }
 void Laboratory::random(int value)
 {
 	srand(static_cast< unsigned int > (time(NULL)));
 	value = rand() % value + 1;
-	cout << "Ðàíäîìíîå ÷èñëî îò 1 - 6: " << value << endl;
+	cout << "Ð Ð°Ð½Ð´Ð¾Ð¼Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾ Ð¾Ñ‚ 1 - 6: " << value << endl;
 }
 Laboratory::~Laboratory()
 {
