@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include <iostream>
-#include <time.h> 
+#include <time.h>
 #include "Laboratory.h"
 
 using namespace std;
